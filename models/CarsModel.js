@@ -22,6 +22,6 @@ const Car = db.define(
 
 export default Car;
 
-(async () => {
-  await db.sync();
-})();
+// (async () => {
+//   await db.sync();
+// })();
