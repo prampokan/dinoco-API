@@ -1,9 +1,11 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 
-const {DataTypes} = Sequelize
+const { DataTypes } = Sequelize;
 
-const Car = db.define('cars', {
+const Car = db.define(
+  "cars",
+  {
     name: DataTypes.STRING,
     brand: DataTypes.STRING,
     price: DataTypes.INTEGER,
@@ -12,12 +14,14 @@ const Car = db.define('cars', {
     year: DataTypes.INTEGER,
     image: DataTypes.STRING,
     url: DataTypes.STRING,
-}, {
-    freezeTableName: true
-})
+  },
+  {
+    freezeTableName: true,
+  },
+);
 
 export default Car;
 
-(async()=>{
-    await db.sync()
-})()
+(async () => {
+  await db.sync();
+})();
